@@ -10,11 +10,10 @@ public class C02Integer {
         b = 30000000;
         b = -30000000;
         b = 0;
-
         // b = 3.14; x
 
-
         // long
+        // int 범위 값이 넘어가는 정수는 뒤에 L을 붙여줄것
 
         // byte, shor
     }
