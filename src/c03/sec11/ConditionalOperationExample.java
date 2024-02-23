@@ -7,5 +7,10 @@ public class ConditionalOperationExample {
         System.out.println(score + "점은 " + grade + "등급입니다.");
 
 
+        double x = 5.0;
+        double y = 0.0;
+        double z = 5 % y;
+
+        
     }
 }
