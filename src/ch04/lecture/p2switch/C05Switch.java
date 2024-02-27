@@ -13,6 +13,7 @@ public class C05Switch {
             }
             default -> {
                 System.out.println("손님입니다.");
+
             }
         }
 
