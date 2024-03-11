@@ -52,4 +52,5 @@ class Rectangle extends Shape {
     public void printArea() {
         System.out.println(x * y);
     }
+
 }
