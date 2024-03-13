@@ -26,15 +26,24 @@ public class C07Sample {
                 int num[] = new int[6];
                 int count = 0;
 
-                Loop1:
-                while (count < 6) {
-                    int rn = random.nextInt(45) + 1;
-                    for (int i = 0; i < count; i++) {
-                        if (num[i] == rn)
-                            continue Loop1;
+//                Loop1:
+//                while (count < 6) {
+//                    int rn = random.nextInt(45) + 1;
+//                    for (int i = 0; i < count; i++) {
+//                        if (num[i] == rn)
+//                            continue Loop1;
+//                    }
+//                    num[count] = rn;
+//                    count++;
+//                }
+
+                for (int i = 0; i < num.length; i++) {
+                    num[i] = random.nextInt(45) + 1;
+                    for (int j = 0; j < i; j++) {
+                        if (num[i] == num[j]) {
+                            i--;
+                        }
                     }
-                    num[count] = rn;
-                    count++;
                 }
                 System.out.println(Arrays.toString(num));
             }
