@@ -6,5 +6,5 @@ public class Example {
             new Student("신용권", 95, 93)
     };
 
-    private static double avg()
+//    private static double avg()
 }
