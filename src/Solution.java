@@ -1,15 +1,15 @@
 import java.util.*;
 
 public class Solution {
-    public int solution(String ineq, String eq, int n, int m) {
-        String cal = ineq + eq;
+    public String solution(String code) {
+        String answer = "";
 
-        int ans = switch (cal) {
-            case ">=" -> n >= m ? 1 : 0;
-            case "<=" -> n <= m ? 1 : 0;
-            case ">!" -> n > m ? 1 : 0;
-            default -> n < m ? 1 : 0;
-        };
-        return ans;
+        int mode = 0;
+        for (int i = 0; i < code.length(); i++) {
+            if (code.charAt(i) == 1) mode = 1 - mode;
+            else if (i % 2 == mode) answer += code.charAt(i);
+        }
+        if (answer.isEmpty()) return "EMPTY";
+        return answer;
     }
 }
