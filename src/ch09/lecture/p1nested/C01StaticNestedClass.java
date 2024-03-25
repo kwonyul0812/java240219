@@ -4,6 +4,7 @@ public class C01StaticNestedClass {
     public static void main(String[] args) {
         C01MyClass.C01NestedClass obj1 = new C01MyClass.C01NestedClass();
 
+
     }
 }
 

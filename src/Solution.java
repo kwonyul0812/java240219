@@ -1,15 +1,14 @@
 import java.util.*;
 
 public class Solution {
-    public String solution(String code) {
-        String answer = "";
+    public int solution(int a, int d, boolean[] included) {
+        int sum = 0;
 
-        int mode = 0;
-        for (int i = 0; i < code.length(); i++) {
-            if (code.charAt(i) == 1) mode = 1 - mode;
-            else if (i % 2 == mode) answer += code.charAt(i);
+        for (int i = 0; i < included.length; i++) {
+            if (included[i]) {
+                sum += a + (d * i);
+            }
         }
-        if (answer.isEmpty()) return "EMPTY";
-        return answer;
+        return sum;
     }
 }
