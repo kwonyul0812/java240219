@@ -14,14 +14,15 @@ public class ClientExample {
             try (bw;) {
                 String sendMessage = "나는 자바가 좋아~";
                 bw.write(sendMessage);
-                bw.newLine(); // 개행 문자 추가
+                bw.newLine();
                 bw.flush();
                 System.out.println("[클라이언트] 데이터 보냄: " + sendMessage);
 
 
                 BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 try (br;) {
-                    String receiveMessage = br.readLine();
+                    String receiveMessage;
+                    receiveMessage = br.readLine();
                     System.out.println("[클라이언트] 데이터 받음: " + receiveMessage);
                 }
             }

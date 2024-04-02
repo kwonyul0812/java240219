@@ -2,6 +2,8 @@ package c02.lecture.p02type;
 
 import java.util.Scanner;
 
+import static java.lang.StringTemplate.STR;
+
 public class C17Scanner {
     public static void main(String[] args) {
 
@@ -16,8 +18,8 @@ public class C17Scanner {
         System.out.println("주소를 입력하세요: ");
         String address = scanner.nextLine();
 
-        String desc = STR."저는 \{address}에 사는 \{age}세 \{name}입니다.";
-        System.out.println("소개 = " + desc);
+//        String desc = STR."저는 \{address}에 사는 \{age}세 \{name}입니다.";
+//        System.out.println("소개 = " + desc);
 
         scanner.close();
     }

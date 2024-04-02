@@ -45,11 +45,10 @@ public class ServerExample {
 
                     BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     String message = br.readLine();
-                    br.close();
+
 
                     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
                     bw.write(message);
-                    bw.newLine(); // 개행 문자 추가
                     bw.flush();
                     System.out.println("[서버] 받은 데이터를 다시 보냄: " + message);
 

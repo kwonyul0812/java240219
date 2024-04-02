@@ -16,7 +16,7 @@ public class C28Printf {
 
         String a = "son";
         String b = "park";
-        System.out.println(STR."hello \{a} and \{b}"); // java 21 부터 사용 가능
+//        System.out.println(STR."hello \{a} and \{b}"); // java 21 부터 사용 가능
         System.out.printf("hello %s and %s\n", a, b);
 
         System.out.printf("%1$s %2$s %3$s\n", "son", "lee", "park");
