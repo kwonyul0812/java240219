@@ -1,5 +1,7 @@
 ### CLI 명령어 배우기
 
+code . : vs code 실행
+
 pwd 
 현재 작업 디렉토리 출력
 
@@ -125,6 +127,9 @@ branch에서 커밋하면
 git branch
 브랜치 목록 보기
 
+git branch -r
+원격 브랜치 목록
+
 git branch -v
 자세히 보기
 
@@ -137,22 +142,86 @@ git branch 별칭 :
 git branch -d 별칭 :
 해당 브랜치 삭제
 
+git branch -D 별칭 :
+강제 삭제
+
+실수로 브랜치 지웠을경우 was 5da6ca6 참고
+
+git commit --amend -m
+마지막 커밋 메시지 변경
+* 최신 커밋만 변경할것, 부모 커밋을 변경할경우 자식 커밋의
+아이디 등 주요 정보들이 전부 다 바뀌기 때문
+
+git reset
+git reset --mixed
+이전 커밋으로 돌아가기 / 스테이지 영역까지 영향 미침,
+			, 파일 수정됐으나 스테이지에 안올라간 상태
+
+git reset --soft / 스테이지 영역은 영향 X
+		스테이지에 올라간 상태로 돌린다
+
+git reset --hard / 워킹 디렉토리 까지 영향 미침
+		파일 수정까지 원복함.
 
 
-code . : vs code 실행
+HEAD~ (mixed reset과 같은 작업을 함)
+HEAD~1
+현재 커밋의 부모
+
+HEAD~2
+현재 커밋의 부모의 부모
+현재 커밋의 2번째 전 커밋
+
+HEAD~n
+현재 커밋의 n번째 전 커밋
+
+git diff 
+스테이지와
+워킹 디렉토리 비교
+
+git rebase -i
+커밋 정리하기
+
+.gitignore
+untracked 파일을
+tracked로 바꾸지 않을 파일 목록
 
 
+*브랜치 종류
+1. 통합브랜치
+2. 작업 브랜치
 
 
+merge: 두개 브랜치 합치기
+
+git merge 대상브랜치명
+현재 브랜치에 대승브랜치명을 반영
+
+fast-forward
+3 way merge
+
+merge conflict
+두 브랜치가
+같은 파일을 변경했을 때 발생
 
 
+git remote add
+새 원격리포지토리 추가
 
 
+git remote
+원격리포지토리 목록 보기
 
+git remote -v
+자세히 보기
 
+git clone
+원격리포지토리 최초로 받기
 
+git fetch
+원격리포의 변경 사항 가져오기
 
-
-
+git pull
+원격리포의 변경 사항을 fetch하고 merge
 
 
