@@ -46,7 +46,6 @@ public class ServerExample {
                     BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     String message = br.readLine();
 
-
                     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
                     bw.write(message);
                     bw.flush();

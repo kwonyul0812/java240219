@@ -12,9 +12,8 @@ public class ClientExample {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
             try (bw;) {
-                String sendMessage = "나는 자바가 좋아~";
+                String sendMessage = "나는 자바가 좋아~\r\n";
                 bw.write(sendMessage);
-                bw.newLine();
                 bw.flush();
                 System.out.println("[클라이언트] 데이터 보냄: " + sendMessage);
 
