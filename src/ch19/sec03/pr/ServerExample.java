@@ -53,6 +53,7 @@ public class ServerExample {
 
                     br.close(); // 수정: BufferedReader를 닫음
                     bw.close(); // 수정: BufferedWriter를 닫음
+                    bw.close();
                     socket.close();
                 }
             } catch (IOException e) {
